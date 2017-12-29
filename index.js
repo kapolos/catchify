@@ -1,6 +1,6 @@
 'use strict';
 
-const catchify = require('./resolve');
+var catchify = require('./resolve');
 
 catchify.all = require('./all');
 catchify.limit = require('./limit');

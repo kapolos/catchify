@@ -9,14 +9,15 @@
  *
  * @returns {{}}
  */
-function newPromiseHandle () {
-  const handle = {};
-  handle.promise = new Promise((resolve, reject) => {
-    handle.resolve = value => {
+
+function newPromiseHandle() {
+  var handle = {};
+  handle.promise = new Promise(function (resolve, reject) {
+    handle.resolve = function (value) {
       resolve(value);
       return handle.promise;
     };
-    handle.reject = value => {
+    handle.reject = function (value) {
       reject(value);
       return handle.promise;
     };
